@@ -11,6 +11,29 @@ public static class ArraySelector
 
     private static int[] ListSelector(int[] list1, int[] list2, int[] select)
     {
-        return [];
+        // a fixed array with the exact size needed
+        int[] result = new int[select.Length];
+
+        // our independent index trackers
+        int index1 = 0;
+        int index2 = 0;
+
+        //Loop through the selector array
+        for (int i = 0; i < select.Length; i++)
+        {
+            // Routing the logic based on the selector value
+            if (select[i] == 1)
+            {
+                result[i] = list1[index1];
+                index1++; // Move the bookmark for list1 forward
+            }
+            else if (select[i] == 2)
+            {
+                result[i] = list2[index2];
+                index2++; // Move the bookmark for list2 forward
+            }
+        }
+
+        return result;
     }
 }
