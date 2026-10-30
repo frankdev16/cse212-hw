@@ -51,7 +51,7 @@ public static class Arrays
         // Step 1: Find the index where we need to make our "cut". We do this by subtracting the 'amount' from the total length of the list.
         // Step 2: Make a copy of the numbers from the "cut" index to the end of the list using GetRange.
         // Step 3: Remove those numbers from the end of the original list using RemoveRange.
-        // Step 4: Insert our copied numbers at the very beginning (index 0) of the original list using InsertRange.
+        // Step 4: Insert the copied numbers at the very beginning (index 0) of the original list using InsertRange.
 
         // Step 1: Find the index where we need to make our "cut"
         int cutIndex = data.Count - amount;
@@ -62,7 +62,7 @@ public static class Arrays
         // Step 3: Remove those numbers from the end of the original list
         data.RemoveRange(cutIndex, amount);
 
-        // Step 4: Insert our copied numbers at the very beginning (index 0) of the original list
+        // Step 4: Insert the copied numbers at the very beginning (index 0) of the original list
         data.InsertRange(0, tail);
     }
 }
